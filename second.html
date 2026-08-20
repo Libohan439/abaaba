@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>神经玩意的大厅</title>
+    <script>
+        if (sessionStorage.getItem('true_or_false') !== 'true') {
+            window.location.replace('first.html');
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #backgroundvideowithoutmusic {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .glasscard {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 32px;
+            padding: 48px 56px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            mix-blend-mode: difference;
+            min-width: 320px;
+            max-width: 800px;
+            width: 90%;
+        }
+        .game-link {
+             display: block;
+             color: white;
+             text-decoration: none;
+             font-size: 24px;
+             padding: 12px;
+         }
+    </style>
+</head>
+<body>
+<video autoplay muted loop playsinline id="backgroundvideowithoutmusic">
+    <source src="https://ayanami.app/RqM_volB0" type="video/mp4">
+</video>
+<div class="glasscard">
+    <script>
+        const API_KEY = "2058970456264b69b36c550fd1ba7076.0XXaajLAmavnIx1J";
+        function showHint() {
+            alert('需在设置中填入 API Key（已复制到剪贴板，可直接粘贴）');
+            navigator.clipboard.writeText(API_KEY).then(() => {
+                window.location.href = "https://misfit-user.github.io/tianming/";
+            });
+        }
+    </script>
+    <a href="javascript:void(0)" onclick="showHint()">天命</a>
+</div>
+</body>
+</html>
