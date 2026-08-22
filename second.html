@@ -11,11 +11,13 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            gap: 30px;
         }
 
         #backgroundvideowithoutmusic {
@@ -50,13 +52,14 @@
             max-width: 800px;
             width: 90%;
         }
+
         .game-link {
-             display: block;
-             color: white;
-             text-decoration: none;
-             font-size: 24px;
-             padding: 12px;
-         }
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 12px;
+        }
     </style>
 </head>
 <body>
@@ -66,6 +69,7 @@
 <div class="glasscard">
     <script>
         const API_KEY = "2058970456264b69b36c550fd1ba7076.0XXaajLAmavnIx1J";
+
         function showHint() {
             alert('需在设置中填入 API Key（已复制到剪贴板，可直接粘贴）');
             navigator.clipboard.writeText(API_KEY).then(() => {
@@ -74,6 +78,12 @@
         }
     </script>
     <button href="javascript:void(0)" onclick="showHint()" class="glasscard">天命</button>
+</div>
+<div class="glasscard">
+    <button onclick="window.location.href='https://mcjs.link/'" class="glasscard">我的世界</button>
+</div>
+<div class="glasscard">
+    <button onclick="window.location.href='https://poki.cn/'" class="glasscard">魔法宝库</button>
 </div>
 </body>
 </html>
